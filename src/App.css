@@ -1,0 +1,45 @@
+#root {
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+}
+  
+/* .img-1{
+  position: absolute; 
+  width: 1326.51px; 
+  height: 1102px; 
+  left: 513px; 
+  top: -222.16px; 
+  background: #DCFF02; 
+  transform: rotate(-8.27deg);
+}*/
+.img-2{
+  position: absolute;
+   width: 1212px; 
+   height: 1102px; 
+   left: 740px; 
+   top: -222px; 
+  
+   /* background: #9C5BF5; */
+} 
+
+
+/* .img-2{
+  position: absolute;
+  left: 1212px; 
+  top: -222px; 
+  
+  height: 900px; 
+  width: 1300px; 
+  padding-left: 4%
+
+} */
+.dog{
+  position: absolute;
+   width: 700px;
+    height: 830px; 
+    left: 1000px; 
+    top: 110px; 
+    /* background: url(dog1.png);  */
+    /* transform: matrix(-1, 0, 0, 1, 0, 0) */
+    
+}

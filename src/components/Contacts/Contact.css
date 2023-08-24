@@ -1,0 +1,11 @@
+.icon1{
+    
+    position: absolute;
+    top: -20px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
