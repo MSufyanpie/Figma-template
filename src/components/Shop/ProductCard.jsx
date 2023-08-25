@@ -8,12 +8,12 @@ export default function ProductCard() {
     <Box  px={'18%'}  justifyContent={'center'} >
     
         
-        <Card style={{border:'3px solid purple',backgroundImage:'img.png',backgroundColor:'#7C58D3'}}>
+        <Card style={{border:'none',backgroundImage:'img.png',backgroundColor:'#7C58D3',height:'50%'}}>
         <HStack>
             <br></br>
             <br></br>
-            <img height={'250px'} width={'250px'} src="src\assets\productImages\ginger.png" alt="" />
-            <VStack>
+            <img className='img-1' height={'300px'} width={'300px'} src="src\assets\productImages\2ndDog.png" alt="" />
+            <VStack mr={'2%'}>
                 
                 
             <h2 style={{color:'white'}}><b>Get 20% off Your First Purchase
@@ -27,7 +27,7 @@ export default function ProductCard() {
             <button className='subscribe-btn'><b>Subscribe</b></button>
             </HStack>
             </VStack>
-            <img height={'300px'} width={'300px'} src="src\assets\productImages\2ndDog.png" alt="" />
+            <img  height={'350px'} width={'350px'} src="src\assets\petdogg.png" alt="" />
             </HStack>
         </Card>
       

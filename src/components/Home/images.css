@@ -36,3 +36,18 @@
     margin-left: 70%;
     top: 100px;
   }
+  @media screen and (max-width:768px) {
+    .img-2{
+      height: 800px;
+      width: 400px;
+       right: 10px;
+       left: 600px;
+      
+    }
+    .dog{
+      height: 600px;
+      width: 500px;
+      left: 650px;
+      top: -2px;
+    }
+  }

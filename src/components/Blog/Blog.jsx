@@ -1,4 +1,4 @@
-import {  Box,  HStack,Image,VStack } from '@chakra-ui/react'
+import {  Box,  HStack,Image,SimpleGrid,VStack } from '@chakra-ui/react'
 import React from 'react'
 import { Badge, Card } from 'react-bootstrap'
 import blog1 from '../../assets/blog1.png'
@@ -37,15 +37,28 @@ export default function Blog() {
         }
     ]
   return (
+    
         <Box px={'25%'}  alignItems={'center'} justifyContent={'center'} height={'70vh'}>
             <div style={{textAlign:'center'}}>
             <p><b>Our Blog</b></p>
             <h1>Latest Post</h1><br/>
             </div>
+            <SimpleGrid
+               columns={{ sm: 1, md: 2, lg: 3, xl: 3 }}
+              
+               templateColumns={{
+                base: '1fr',
+                
+                
+              }}
+            >
         <HStack>
+
     {posts.map((data,index)=>{
         return(
+          <HStack>
             <Box key={index}>
+           
             
                 <Card>
               
@@ -67,12 +80,15 @@ export default function Blog() {
                 </HStack>
                 <h5><b>{data.title}</b></h5>
                 <p>{data.description}</p>
+                {/* // </SimpleGrid> */}
+                 </Box>
+                 </HStack>
                 
-                </Box>
         )
     }
     )}
     </HStack>
+    </SimpleGrid>
     </Box>
     
   )

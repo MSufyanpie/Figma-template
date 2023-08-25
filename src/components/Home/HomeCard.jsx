@@ -11,7 +11,7 @@ export default function HomeCard() {
     
     alignItems={"center"}
     justifyContent={"center"}
-    height={"40vh"}>
+    height={"20vh"}>
         <Card  style={{border:'none',
         }}>
             <div style={{display:'flex',}}>

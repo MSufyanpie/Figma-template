@@ -12,6 +12,7 @@ input{
     background-color:#7C58D3 ;
     
 }
-::placeholder{
+input::placeholder{
     color:white;
+    text-align: center;
 }

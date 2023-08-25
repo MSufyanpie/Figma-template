@@ -1,6 +1,6 @@
-import { Box, Flex, HStack, Image, VStack } from '@chakra-ui/react'
+import { Box, Flex, HStack, Image, Link, VStack,SimpleGrid, Card } from '@chakra-ui/react'
 import React from 'react'
-import { Card, Container } from 'react-bootstrap'
+import {  Container } from 'react-bootstrap'
 
 export default function ShopProducts(props) {
   
@@ -39,13 +39,22 @@ export default function ShopProducts(props) {
         }
     ]
   return (
-    <Box px={'20%'} display={'flex'} alignItems={'center'} justifyContent={'center'} height={'100vh'}>
-    <HStack>
+    
+    <Box px={'20%'} display={'flex'} alignItems={'center'} justifyContent={'center'} height={'120vh'}>
+    
+ <HStack>
+ 
+ 
         <VStack>
+        <h2>Featured Products</h2>
         {products.map((data,index)=>{
             return (
                 
-            <Card style={{border:'none'}}  key={index}>
+            
+            <Card
+            mt={'10%'}
+            variant={'unstyled'}
+             key={index}>
                 <HStack>
                 <Image height={'100px'} width={'130px'}
                 src="src\assets\productImages\1.png" alt="" />
@@ -61,12 +70,20 @@ export default function ShopProducts(props) {
             )
         }
         )}
+        {/* </SimpleGrid> */}
     </VStack>
+   
     <VStack>
+    <h2>On Sale Products</h2>
         {products2.map((data,index)=>{
             return (
                 
-            <Card style={{border:'none'}} key={index}>
+            <Card 
+            ml={'8%'}
+            mt={'10%'}
+            variant={'unstyled'}
+             key={index}>
+              
                  <HStack>
                 <Image height={'100px'} width={'130px'} src="src\assets\productImages\1.png" alt="" />
                 <VStack textAlign={'center'}>
@@ -83,10 +100,15 @@ export default function ShopProducts(props) {
         )}
     </VStack>
     <VStack>
+    <h2>Top Rated Products</h2>
         {products3.map((data,index)=>{
             return (
                 
-            <Card style={{border:'none'}} key={index}>
+            <Card
+            ml={'5%'}
+            mt={'10%'}
+            variant={'unstyled'}
+             key={index}>
                  <HStack>
                 <Image height={'100px'} width={'130px'} src="src\assets\productImages\1.png" alt="" />
                 <VStack textAlign={'center'}>
@@ -105,6 +127,7 @@ export default function ShopProducts(props) {
         )}
     </VStack>
     </HStack>
+    
     </Box>
   )
 }

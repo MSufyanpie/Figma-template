@@ -9,9 +9,11 @@ import NavBar from './components/Home/Navbar'
 import Sections from './components/Sections/Sectionos'
 
 
+export let cart=5;
 
 
 function App() {
+  
   
 
   return (

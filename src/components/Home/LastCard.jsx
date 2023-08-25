@@ -1,59 +1,81 @@
-import { Box, HStack } from '@chakra-ui/react'
+import { Box, HStack, SimpleGrid,Card, Image, VStack, Text } from '@chakra-ui/react'
 import React from 'react'
-import { Card } from 'react-bootstrap'
+
 
 export default function LastCard() {
   return (
-    <Box px={'30%'}   justifyContent={'center'} height={'30vh'} >
+    
+    <Box  px={'13%'}   justifyContent={'center'} height={'30vh'} >
         
     <div style={{textAlign:'center'}}>
-        <Card style={{backgroundColor:'#9C5BF5', justifyContent:'space-evenly',height:'25vh'}}>
+        <Card className='last-card'
+        backgroundImage={' linear-gradient(315deg, #d4418e 38%, #0652c5 62%)'}
+        backgroundColor={'#9C5BF5'}
+        justifyContent={'space-evenly'} 
+        height={'25vh'}
+        >
         <HStack ml={'4%'} mr={'4%'}>
-            {/* <div style={{display:'flex',justifyContent:'space-evenly',marginTop:'3%',marginBottom:'3%'}}> */}
             
-            <Box px={'2%'}>
-             <div style={{display:'flex'}}>
-                <img  style={{height:'50px',width:'50px',marginTop:'5%'}} src="src\assets\last card dog1.png" alt="" />
-                <div style={{display:'grid',marginLeft:'3%'}}>
+            
+            <Box px={'5%'}>
+             <HStack >
+                <Image 
+                height={'50px'}
+                width={'50px'}
+                 src="src\assets\last card dog1.png" alt="" />
+                <VStack >
                     <h2 style={{color:'white'}}>
                         <b>120+</b>
                     </h2>
-                    <p style={{color:'white'}}>Satisfied Clients</p>
-                </div>
-             </div>  </Box>  
+                    <Text color={'white'}>Satisfied Clients</Text>
+                    
+                </VStack>
+             </HStack>  </Box>  
 
             <Box px={'6%'}>
-            <div style={{display:'flex'}}>
-                <img  style={{height:'50px',width:'50px',marginTop:'5%'}} src="src\assets\pngegg.png" alt="" />
-                <div style={{display:'grid',marginLeft:'3%'}}>
+            <HStack >
+                <Image
+                
+                height={'50px'}
+                width={'50px'}
+                 src="src\assets\pngegg.png" alt="" />
+                <VStack>
                     <h2 style={{color:'white'}}>
                         <b>20+</b>
                     </h2>
-                    <p style={{color:'white'}}>Years Experience</p>
-                </div>
-            </div>    
+                    <Text color={'white'}>Years Experience</Text>
+                    
+                </VStack>
+            </HStack>    
             </Box>
             <Box px={'6%'}>
-            <div style={{display:'flex'}}>
-                <img  style={{height:'50px',width:'50px',marginTop:'5%'}} src="src\assets\petshop.png" alt="" />
-                <div style={{display:'grid',marginLeft:'3%'}}>
+            <HStack style={{display:'flex'}}>
+                <Image  
+                height={'50px'}
+                width={'50px'}
+                 src="src\assets\petshop.png" alt="" />
+                <VStack>
                     <h2 style={{color:'white'}}>
                         <b>70+</b>
                     </h2>
-                    <p style={{color:'white'}}>Brands Avalaible</p>
-                </div>
-            </div>    
+                    <Text color={'white'}>Brands Avalaible</Text>
+                </VStack>
+            </HStack>    
             </Box>
             <Box px={'5%'}>
-            <div style={{display:'flex'}}>
-                <img  style={{height:'50px',width:'50px',marginTop:'5%'}} src="src\assets\petBag.png" alt="" />
-                <div style={{display:'grid',marginLeft:'3%'}}>
+            <HStack>
+                <Image 
+                height={'50px'}
+                width={'50px'}
+                src="src\assets\petBag.png" alt="" />
+                <VStack >
                     <h2 style={{color:'white'}}>
                         <b>200+</b>
                     </h2>
-                    <p style={{color:'white'}}>Products for pets</p>
-                </div>
-            </div>   
+                    <Text color={'white'}>Products for pets</Text>
+                    
+                </VStack>
+            </HStack>   
             </Box> 
         
         
@@ -66,5 +88,6 @@ export default function LastCard() {
     </div>
     
     </Box>
+    
   )
 }

@@ -1,5 +1,7 @@
-.custom-badge{
-    background-color: #9C5BF5;
-    height: 40px;
-    margin-top: 5%;
+.image1{
+    transform: translateX(25%);
+ 
+}
+.image2{
+    transform: translateX(25%)
 }
