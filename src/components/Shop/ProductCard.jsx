@@ -5,10 +5,12 @@ import './ProductCard.css'
 
 export default function ProductCard() {
   return (
-    <Box  px={'18%'}  justifyContent={'center'} >
+    <Box 
+    height={'55vh'}
+     px={'10%'}  justifyContent={'center'} >
     
         
-        <Card style={{border:'none',backgroundImage:'img.png',backgroundColor:'#7C58D3',height:'50%'}}>
+        <Card style={{border:'none',backgroundImage:'img.png',backgroundColor:'#7C58D3'}}>
         <HStack>
             <br></br>
             <br></br>

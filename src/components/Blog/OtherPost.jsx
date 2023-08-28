@@ -4,8 +4,9 @@ import { Badge, Card } from 'react-bootstrap'
 import other1 from '../../assets/other1.png'
 import other2 from '../../assets/other2.png'
 import other3 from '../../assets/other3.png'
-import  { AiOutlineUser,AiFillCalendar } from 'react-icons/ai'
-import './Blog.css'
+
+import './Blog.scss'
+import OtherPostDeign from './OtherPostDeign'
  
 
 export default function OtherPost() {
@@ -37,39 +38,28 @@ export default function OtherPost() {
         }
     ]
   return (
-        <Box px={'25%'}  alignItems={'center'} justifyContent={'center'} height={'65vh'}>
+        <Box px={'10%'}  alignItems={'center'} justifyContent={'center'} height={'85vh'}>
             <div style={{textAlign:'center'}}>
             
             <h1>Other Posts</h1><br/>
             </div>
-        <HStack>
+        <div style={{display:'flex'}}>
     {posts.map((data,index)=>{
         return(
-            <Box key={index}>
-            
-                <Card>
-                <div>
-                    <Badge className='badge-1' bg='warning' style={{color:'black'}} >{data.badge}</Badge>
-                  </div>
-                    
-                      <Image src={data.imageUrl}></Image>
-                    
-                        
-                </Card>
-                <HStack>
-                   <p style={{fontSize:'15px'}}>
-                    <AiOutlineUser style={{color:'purple'}}/><b>{data.author}</b></p>
-                    
-                    <p style={{fontSize:'15px'}}><AiFillCalendar style={{color:'purple'}}/><b>{data.date}</b></p>
-                </HStack>
-                <h5><b>{data.title}</b></h5>
-                <p>{data.description}</p>
-                
-                </Box>
+          <OtherPostDeign
+        
+          id={index}
+          author={data.author}
+          date={data.date}
+          title={data.title}
+         description={data.description}
+         imageUrl={data.imageUrl}
+          badge={data.badge}
+          />
         )
     }
     )}
-    </HStack>
+    </div>
     </Box>
     
   )

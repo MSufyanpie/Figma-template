@@ -6,19 +6,10 @@ import LastCards from './LastCards'
 export default function Services() {
   return (
     <div>
-         <SimpleGrid
-         columns={{ sm: 1, md: 2, lg: 3, xl: 3 }}
-         padding={'10px'}
-         spacing={20}
-         alignContent={'space-between'}
-         templateColumns={{
-           base: '1fr',
-           
-         }}
-        >
+         
         <ServicesCard></ServicesCard>
         <LastCards></LastCards>
-        </SimpleGrid>
+        
     </div>
   )
 }

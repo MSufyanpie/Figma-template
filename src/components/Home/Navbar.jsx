@@ -55,10 +55,10 @@ export default function NavBar() {
                 <Box px={'6%'}>
                 <HStack style={{textAlign:'center',justifyContent:'space-evenly'}}>
                 <AiFillPhone  style={{fontSize:'30px',}}></AiFillPhone>
-                <p style={{fontSize:'20px'}}> 0000-1234567</p>
+                <p style={{fontSize:'15px'}}> 0000-1234567</p>
                 
                 <AiFillMail style={{fontSize:'30px',}}></AiFillMail> 
-                <p style={{fontSize:'20px'}}>info@example.com</p>
+                <p style={{fontSize:'15px'}}>info@example.com</p>
                 
                 
                 </HStack>
@@ -89,19 +89,19 @@ export default function NavBar() {
             <Nav className="me-auto">
               <Box className='menu' >
                 <HStack>
-              <Box px={"8px"}>
+              <Box px={"1px"}>
                <Nav.Link onClick={()=>scrollToSection("#section1")}  style={{color:'black'}} href="/#section1"><b>Home</b></Nav.Link>
                </Box>
-               <Box px={"8px"}>
+               <Box px={"1px"}>
               <Nav.Link onClick={()=>scrollToSection("#section2")} style={{color:'black'}} href="/#section2"><b>Services</b></Nav.Link>
               </Box>
-              <Box px={"8px"}>
+              <Box px={"1px"}>
               <Nav.Link onClick={()=>scrollToSection("#section3")} style={{color:'black'}} href="/#section3"><b>Shop</b></Nav.Link>
               </Box>
-              <Box px={"8px"}>
+              <Box px={"1px"}>
               <Nav.Link  onClick={()=>scrollToSection("#section4")}style={{color:'black'}} href="/#section4"><b>Blog</b></Nav.Link>
               </Box>
-              <Box px={"8px"}>
+              <Box px={"1px"}>
               <Nav.Link onClick={()=>scrollToSection("#section5")} style={{color:'black'}} href="/#section5"><b>Contact</b></Nav.Link> 
               
               </Box>

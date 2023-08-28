@@ -1,31 +1,41 @@
 import React from "react";
-
+import './ServicesCard.scss'
 import {
-    Box,
     Button,
     Card,
     CardBody,
     CardHeader,
     HStack,
     Image,
-    SimpleGrid,
+  
     Text,
-    VStack,
-    grid,
+    
   } from "@chakra-ui/react";
 
-// id={index} imageUrl={data.image} title={data.title} contentText={data.content} price={data.rate}
+
 const CardDesign = ({id, imageUrl, title,contentText,price}) =>{
 
     return(
          
             <div
               key={id}
-              style={{  justifyContent: "space-evenly", }}
+              style={{  justifyContent: "space-evenly",
+                        maxWidth:'33.33%',
+                        padding:'0 3px',
+                        border:'none',
+                        marginBottom:'15px'
+                      
+            
+            }}
             >
-              <div>
+              <div
+              style={{  
+           
+              border:'none',
+              }}
+              >
                 <Card 
-                
+                  border={'none'}
                   background={'transparent'}
                  
                  backgroundImage={'linear-gradient(316deg, #d4a7c9 0%, #e0e5e5 74%)'}

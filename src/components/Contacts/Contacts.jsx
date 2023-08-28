@@ -1,9 +1,10 @@
 import { Box, Card, CardBody, HStack } from '@chakra-ui/react'
 import React from 'react'
-// import { Card } from 'react-bootstrap'
+
 import {AiFillPhone,AiFillMail,AiFillClockCircle} from "react-icons/ai";
 import {BiMap}from "react-icons/bi"
 import './Contact.css'
+import ContactsDesign from './ContactsDesign';
 
 export default function Contacts() {
     const contact=[
@@ -11,8 +12,6 @@ export default function Contacts() {
           line1:'(913) 756-3126 (921)',
           line2:'(913) 756-3126 (921)',
           line3:<AiFillPhone/>,
-          
-          
         },
         
         { 
@@ -30,20 +29,31 @@ export default function Contacts() {
             Title:'Open Hours',
             line1:'Mon-Fri: 7am-6pm',
             line2:'Saturday:9am-4am',
-            line3:<AiFillClockCircle/>,
-          
+            line3:<AiFillClockCircle/>,     
         }
     ]
   return (
-    <div style={{backgroundColor:'#FBF9FF',height:'60vh',padding:'30px'}}>
+    <Box px={'10%'}  style={{backgroundColor:'#FBF9FF',height:'70vh',}}>
          <div style={{textAlign:'center',marginBottom:'40px'}}>
             <p ><b>Our Contacts</b></p>
             <h1>Contact</h1>
             </div>
-    
-    <Box  display={'flex'} alignItems={'center'} justifyContent={'center'} height={'30vh'}>
+            <div className='parent-container'>
+            {contact.map((data,index)=>{
+                return(
+                <ContactsDesign 
+                id={index}
+                Title={data.Title}
+                line1={data.line1}
+                line2={data.line2}
+                line3={data.line3}
+                />
+                )
+            })}
+           </div>
+    {/* <Box justifyContent={'center'} alignContent={'center'} >
         
-        <HStack px={'25%'}>
+        <HStack  >
         {contact.map((data,index)=>{
         return(
             <Card  mb={'40px'} boxSize={'250px'} style={{border:'1px solid purple'}} key={index}>
@@ -63,7 +73,7 @@ export default function Contacts() {
         )
         })}
         </HStack>
+    </Box> */}
     </Box>
-    </div>
   )
 }

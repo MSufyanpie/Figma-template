@@ -1,5 +1,5 @@
 import React from 'react'
-import './images.css'
+import './images.scss'
 export default function Images() {
   return (
     <div >

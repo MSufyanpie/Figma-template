@@ -1,0 +1,24 @@
+$pos: absolute;
+@mixin image2 {
+  width: 56%;
+  height: 1000px;
+  left: 600px;
+  top: -222px;
+}
+
+@mixin dog {
+  width: 600px;
+  height: 700px;
+  left: 750px;
+  top: 110px;
+}
+
+.img-2 {
+  position: $pos;
+  @include image2;
+}
+
+.dog {
+  position: $pos;
+  @include dog;
+}

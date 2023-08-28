@@ -1,0 +1,72 @@
+@use './ServicesCard.scss' as *;
+
+$height:120vh;
+$padd:3%;
+$color:#FCDCB5;
+$color2:#FFDA47;
+$color3:#9C5BF5;
+@mixin card1{
+    width:55%;
+    margin-left: 5%;
+}
+@mixin text{
+    margin-left: 13%;
+    margin-bottom: 60%;
+}
+@mixin badge{
+    color: white;
+    border-radius: 5px;
+   
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+@mixin button{
+    color:#9C5BF5 ;
+    font-weight: bold;
+    font-size: 20px;
+}
+ 
+@mixin card2{
+              height: 250px;
+              width: 350px;
+              background-color: $color2;
+              border-radius: 10px;
+              margin-left: 2%;
+}
+
+.image1{
+    transform: translateX(25%);
+ 
+}
+.image2{
+    transform: translateX(25%)
+}
+
+.lastcards-box{
+   height: $height;
+   padding-left: $padd;
+   padding-right: $padd;
+}
+.last-cards{
+    background-color:$color;
+    @include border;
+    @include card1;
+}
+.badge{
+    @include badge
+}
+.text{
+    @include text
+}
+.service-btn{
+    @include button
+}
+
+.othercards{
+    display: grid;
+}
+.card2{
+    @include card2;
+    @include border
+}

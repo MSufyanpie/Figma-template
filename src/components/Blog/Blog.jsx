@@ -5,18 +5,17 @@ import blog1 from '../../assets/blog1.png'
 import blog2 from '../../assets/blog2.png'
 import blog3 from '../../assets/blog3.png'
 import  { AiOutlineUser,AiFillCalendar } from 'react-icons/ai'
-import './Blog.css'
+import './Blog.scss'
+import BlogDesign from './BlogDesign'
 
 export default function Blog() {
     const posts=[
         { author:'by Corabelle Durrad',
           date:'02.01.2022',
-          title:'5 Crazy Things Dogs Do When Left Alone At Home',
+          title:'5 Crazy Things Dogs Do When Left Alone',
           description:'Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus.',
           imageUrl:blog1,
-          badge:'Training'
-
-          
+          badge:'Training'        
         },
         
         { 
@@ -30,7 +29,7 @@ export default function Blog() {
         { 
             author:'by Corabelle Durrad',
           date:'02.01.2022',
-          title:'Top Cat Foods to Consider If You Are a First Time Owner',
+          title:' Cat Foods to Consider If You Are a Owner',
           description:'Amet porttitor eget dolor morbi non arcu risus quis varius  sodales ut etiam sit amet ',
           imageUrl:blog3,
           badge:'Pet Food'
@@ -38,57 +37,30 @@ export default function Blog() {
     ]
   return (
     
-        <Box px={'25%'}  alignItems={'center'} justifyContent={'center'} height={'70vh'}>
+        <Box px={'15%'}  alignItems={'center'} justifyContent={'center'} height={'100vh'}>
             <div style={{textAlign:'center'}}>
             <p><b>Our Blog</b></p>
             <h1>Latest Post</h1><br/>
             </div>
-            <SimpleGrid
-               columns={{ sm: 1, md: 2, lg: 3, xl: 3 }}
-              
-               templateColumns={{
-                base: '1fr',
-                
-                
-              }}
-            >
-        <HStack>
+           
+        <div style={{display:'flex'}}>
 
     {posts.map((data,index)=>{
         return(
-          <HStack>
-            <Box key={index}>
-           
-            
-                <Card>
-              
-                  <div>
-                    <Badge className='badge-1' bg='warning' style={{color:'black'}} >{data.badge}</Badge>
-                  </div>
-                  
-                  <Image src={data.imageUrl}></Image>
-                        
-                  
-                      
-                </Card>
-                
-                <HStack>
-                <p style={{fontSize:'15px'}}>
-                    <AiOutlineUser style={{color:'purple'}}/><b>{data.author}</b></p>
-                    
-                    <p style={{fontSize:'15px'}}><AiFillCalendar style={{color:'purple'}}/><b>{data.date}</b></p>
-                </HStack>
-                <h5><b>{data.title}</b></h5>
-                <p>{data.description}</p>
-                {/* // </SimpleGrid> */}
-                 </Box>
-                 </HStack>
-                
+         <BlogDesign
+        
+         id={index}
+         author={data.author}
+         date={data.date}
+         title={data.title}
+        description={data.description}
+        imageUrl={data.imageUrl}
+         badge={data.badge}
+         />
         )
     }
     )}
-    </HStack>
-    </SimpleGrid>
+    </div>
     </Box>
     
   )

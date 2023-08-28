@@ -7,7 +7,7 @@ export default function FirstTxtBox() {
     px={"12%"}
     alignItems={"center"}
     justifyContent={"center"}
-    height={"35vh"}>
+    height={"45vh"}>
     <p style={{color:'#7C58D3',fontFamily:'nunito',fontWeight:'300px'}}><b>WE CARE FOR YOUR PETS</b></p>
     <div >
     <h1 style={{fontSize:'60px',fontFamily:'nunito',fontWeight:'1000'}}>We Help You Care</h1>

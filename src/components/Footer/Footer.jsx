@@ -6,13 +6,13 @@ import {BsDot} from "react-icons/bs"
 export default function Footer() {
     
   return (
-    // <div style={{backgroundColor:'#FBF9FF',height:'60vh',}}>
-    <div style={{backgroundColor:'#FBF9FF',height:'70vh'}}>
-      <HStack  px={'20%'} alignItems={'center'} justifyContent={'center'} height={'60vh'}    >
-        <HStack px={'6%'}>
-<Box mr={'2%'}>
-          <Card variant={'unstyled'} background={'transparent'} style={{borderRadius:'0', }}
-          mb={'50px'} boxSize={'320px'}>
+    
+    <Box style={{ backgroundColor:'#FBF9FF',}} >
+      <HStack alignItems={'center'} justifyContent={'center'}       >
+        <HStack >
+<Box>
+          <Card ml={'5%'} variant={'unstyled'} background={'transparent'} 
+          mb={'50px'} boxSize={'300px'}>
           <VStack>
             <HStack>
               <Image style={{height:'30px',width:'30px'}} src='src\assets\kutta.png'></Image>
@@ -31,11 +31,11 @@ export default function Footer() {
           </VStack>
           </Card>
           </Box>
-          <Card  background={'transparent'} style={{borderRadius:'0', }} variant={'unstyled'} mb={'50px'} boxSize={'320px'} >
+          <Card ml={'5%'}  background={'transparent'} style={{borderRadius:'0', }} variant={'unstyled'} mb={'30px'} boxSize={'320px'} >
             <CardHeader>
           <h4 style={{color:'purple'}}>Working Hours</h4>
           </CardHeader>
-          <CardBody  mb={'50px'} boxSize={'200px'}>
+          <CardBody  mb={'30px'} boxSize={'200px'}>
             <VStack backgroundColor={'white'}>
           
           <HStack>
@@ -54,7 +54,7 @@ export default function Footer() {
           </CardBody >
           </Card>
          
-          <Card  background={'transparent'} style={{borderRadius:'0', }} variant={'unstyled'} mb={'50px'} boxSize={'320px'}>
+          <Card  background={'transparent'} style={{borderRadius:'0', }} variant={'unstyled'} mb={'2px'} boxSize={'350px'}>
             <CardHeader background={'transparent'} style={{borderRadius:'0', }} variant={'unstyled'} textAlign={'center'}>
             <h4 style={{color:'purple'}}>Useful Link</h4>
             </CardHeader>
@@ -76,7 +76,7 @@ export default function Footer() {
             </CardBody>
           </Card >
           <Box px={'5%'}>
-          <Card  background={'transparent'} style={{borderRadius:'0', }} variant={'unstyled'} mb={'50px'} boxSize={'320px'}>
+          <Card  background={'transparent'} style={{borderRadius:'0', }} variant={'unstyled'} mb={'30px'} boxSize={'320px'}>
             <h4 style={{color:'purple'}}>News Letter</h4>
             <p>Be first in the queue! Get our latest news straight to your inbox.</p>
             <HStack>
@@ -102,7 +102,7 @@ export default function Footer() {
        
        <p>NOOT ©  All rights reserved Copyrights 2023</p>
        </div> 
-       </div> 
+       </Box> 
    
   )
 }

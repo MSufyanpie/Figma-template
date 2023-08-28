@@ -5,7 +5,7 @@ import React from 'react'
 export default function LastCard() {
   return (
     
-    <Box  px={'13%'}   justifyContent={'center'} height={'30vh'} >
+    <Box  px={'8%'}   justifyContent={'center'} height={'40vh'} >
         
     <div style={{textAlign:'center'}}>
         <Card className='last-card'
