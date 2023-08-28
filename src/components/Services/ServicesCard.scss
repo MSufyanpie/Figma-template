@@ -1,0 +1,35 @@
+$color:#9C5BF5;
+$align:center;
+$height:150vh;
+$padd:7%;
+
+@mixin border{
+    border: none;
+}
+
+.row-1:hover{
+    background-color: $color;
+}
+.parent-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+       
+}
+.services-div{
+    @include border
+}
+.services-cards{
+    @include border
+}
+.our-services{
+    text-align: $align;
+}
+.txt{
+    text-align: $align;
+}
+.services-box{
+    height: $height;
+    padding-left: 7%;
+    padding-right: 7%;
+}

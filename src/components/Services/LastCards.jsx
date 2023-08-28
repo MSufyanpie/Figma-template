@@ -1,48 +1,41 @@
 import React from "react";
-// import { Button, } from "react-bootstrap";
-import { AiOutlineArrowRight } from "react-icons/ai";
-import "./LastCards.css";
-import { Badge, Box, Card, HStack, Image, Text, VStack,Button } from "@chakra-ui/react";
+
+import "./LastCards.scss";
+import {  Box, HStack, Image, Text, VStack,Button } from "@chakra-ui/react";
+import { Badge, Card } from "react-bootstrap";
 
 export default function LastCards() {
   return (
-    <HStack
-      px={"18%"}
+    <Box
+    className="lastcards-box"
       
-      alignItems={"center"}
-      justifyContent={"center"}
-      height={"100vh"}
+    
+      
+      
+     
     >
       <HStack >
         <Card
-        backgroundColor={"#FCDCB5"}
-        border={'none'}
-          
+        className="last-cards"
+        
         >
           <HStack justifyContent={'space-evenly'} >
             
-            <h1 style={{ marginTop: "20%", marginRight: "2%" }}>
+            <h1 style={{ marginTop: "20%",  }}>
               Check Out Our Specials {" "}
             </h1>
             
             
             <Badge
-              borderRadius={"5px"}
-              color={"white"}
-              textAlign={"center"}
-              alignContent={"center"}
-              justifyContent={"center"}
-              fontSize={"20px"}
-              backgroundColor={"#9C5BF5"}
-              
-              height={'40px'}
+              className="badge"
+             
             >
               Up to 40% off
             </Badge>
           </HStack>
-          <HStack style={{ display: "flex",  }}>
+          <HStack >
           <VStack>
-              <Text mb={'60%'} style={{   marginLeft: "10%" }}>
+              <Text className="text" >
                 suspendisse potenti nullam ac tortor vitaePotenti nullam ac
                 tortor vitae purus faucibus ornare vitae purus faucibus ornare
               </Text>
@@ -58,28 +51,19 @@ export default function LastCards() {
           </HStack>
 
           <Button 
+          className="service-btn"
          variant="none"
-         color={"#9C5BF5"}
-         fontWeight={'bold'}
-         fontSize={'20px'}
-          >
-            
+          > 
               Get Service
             
           </Button>
         </Card>
-        <VStack style={{ display: "grid" }}>
+        <Box className="othercards">
           <Card
-            style={{
-              height: "250px",
-              width: "350px",
-              backgroundColor: "#FFDA47",
-              border: "none",
-              borderRadius: "10px",
-              marginLeft: "2%",
-            }}
+          className="card2"
+           
           >
-            <HStack >
+            <HStack>
               <VStack >
                 <h4 style={{marginLeft:'5%'}}>
                   <b>Luxury Fashion Collection</b>
@@ -138,8 +122,8 @@ export default function LastCards() {
               />
             </HStack>
           </Card>
-        </VStack>
+        </Box>
       </HStack>
-    </HStack>
+    </Box>
   );
 }
