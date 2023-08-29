@@ -1,5 +1,5 @@
 import React from 'react'
-import {  HStack, Image,  VStack, Card } from '@chakra-ui/react'
+import {  Image,   Card } from '@chakra-ui/react'
 import './ProductDesign.scss'
 export default function ProductsDesign({id,Name,Price}) {
   return (
@@ -7,19 +7,19 @@ export default function ProductsDesign({id,Name,Price}) {
     className='prod-design-div'
     >
         <Card
-            mt={'10%'}
+        className='all-product-cards'
             px={'5%'}
             variant={'unstyled'}
              key={id}>
-                <HStack>
+                <div className='content-div'>
                 <Image height={'80px'} width={'80px'}
                 src="src\assets\productImages\1.png" alt="" />
-                <VStack textAlign={'center'}>
+                <div className='child-div'>
                 <h6>{Name}</h6>
-                <span style={{color:'#e8e82e'}}>&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                <p style={{color:'#9C5BF5'}}><b>{Price}</b></p>
-                </VStack>
-                </HStack>
+                <span className='stars'>&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+                <p className='price'><b>{Price}</b></p>
+                </div>
+                </div >
                 <hr/>
                 
             </Card>

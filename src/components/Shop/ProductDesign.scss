@@ -1,3 +1,10 @@
+$mt:10%;
+$star-color:#e8e82e;
+$price-color:#9C5BF5;
+@mixin child-div{
+    margin-left: 5%;
+    text-align: center;
+}
 @mixin parent-div {
   justify-content: space-evenly;
   max-width: 33.33%;
@@ -7,4 +14,19 @@
 }
 .prod-design-div{
     @include parent-div;
+}
+.all-product-cards{
+    margin-top: $mt;
+}
+.content-div{
+    display: flex;
+}
+.child-div{
+    @include child-div;
+}
+.stars{
+    color: $star-color;
+}
+.price{
+    color: $price-color;
 }

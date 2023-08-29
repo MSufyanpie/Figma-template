@@ -1,10 +1,10 @@
-import {  Box,  HStack,Image,SimpleGrid,VStack } from '@chakra-ui/react'
+import {  Box,  } from '@chakra-ui/react'
 import React from 'react'
-import { Badge, Card } from 'react-bootstrap'
+
 import blog1 from '../../assets/blog1.png'
 import blog2 from '../../assets/blog2.png'
 import blog3 from '../../assets/blog3.png'
-import  { AiOutlineUser,AiFillCalendar } from 'react-icons/ai'
+
 import './Blog.scss'
 import BlogDesign from './BlogDesign'
 
@@ -37,13 +37,17 @@ export default function Blog() {
     ]
   return (
     
-        <Box px={'15%'}  alignItems={'center'} justifyContent={'center'} height={'100vh'}>
+        <Box
+        className='postsBox'
+         px={'15%'} >
             <div style={{textAlign:'center'}}>
             <p><b>Our Blog</b></p>
             <h1>Latest Post</h1><br/>
             </div>
            
-        <div style={{display:'flex'}}>
+        <div
+        className='blog-posts'
+        >
 
     {posts.map((data,index)=>{
         return(

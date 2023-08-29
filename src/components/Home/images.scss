@@ -22,3 +22,16 @@ $pos: absolute;
   position: $pos;
   @include dog;
 }
+@media (max-width:700px) {
+  .img-2{
+    width: 55.5%;
+    height:650px;
+    left: 175px;
+  }
+  .dog{
+    left: 210px;
+    top:90px;
+    height:330px ;
+    width: 210px;
+  }
+}

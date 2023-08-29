@@ -18,6 +18,7 @@ const CardDesign = ({id, imageUrl, title,contentText,price}) =>{
     return(
          
             <div
+            className="cards-div"
               key={id}
               style={{  justifyContent: "space-evenly",
                         maxWidth:'33.33%',
@@ -35,6 +36,7 @@ const CardDesign = ({id, imageUrl, title,contentText,price}) =>{
               }}
               >
                 <Card 
+                className="serv-cards"
                   border={'none'}
                   background={'transparent'}
                  

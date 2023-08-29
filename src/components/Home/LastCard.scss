@@ -1,0 +1,41 @@
+$height:40vh;
+$mg:4%;
+@mixin Card{
+    background-color: #9C5BF5;
+    justify-content:space-evenly; 
+    height:25vh;
+}
+.card-Box{
+    height: $height;
+}
+.parentdiv{
+    text-align: center;
+}
+.Card{
+    @include Card;
+}
+.seconddiv{
+    display: flex;
+    margin-left: $mg;
+    margin-right: $mg;
+}
+
+.contentdiv{
+    display: flex;
+   
+}
+h2{
+    color: white;
+}
+.Text{
+    color: white;
+}
+
+
+
+@media (max-width:700px){
+    .Card{
+        width: 150%;
+    }
+
+}

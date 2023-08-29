@@ -1,0 +1,42 @@
+
+$txtalign:center;
+@mixin contact-box{
+    background-color:#FBF9FF ;
+    height: 70vh ;
+}
+@mixin icons{
+    position: absolute;
+    top: -20px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 5px;
+    // border: 1px solid purple;
+    border-radius: 50%;
+    font-size: x-large;
+}
+
+
+
+.icon1{
+    @include icons;
+   
+}
+.parent-container{
+    display: flex;
+}
+
+.contacts-box{
+    @include contact-box;
+}
+.first-div{
+    text-align:$txtalign;
+}
+
+
+
+@media (max-width:700px) {
+    .contacts-box{
+        height: 150vh;
+    }
+}

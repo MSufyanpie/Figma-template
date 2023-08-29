@@ -1,89 +1,93 @@
-import { Box, HStack, SimpleGrid,Card, Image, VStack, Text } from '@chakra-ui/react'
+import { Box,Card, Image, Text } from '@chakra-ui/react'
 import React from 'react'
-
+import './LastCard.scss'
 
 export default function LastCard() {
   return (
     
-    <Box  px={'8%'}   justifyContent={'center'} height={'40vh'} >
+    <Box
+    className='card-Box'
+    px={'8%'}>
         
-    <div style={{textAlign:'center'}}>
-        <Card className='last-card'
+    <div 
+    className='parentdiv'
+   >
+        <Card className='Card'
         backgroundImage={' linear-gradient(315deg, #d4418e 38%, #0652c5 62%)'}
-        backgroundColor={'#9C5BF5'}
-        justifyContent={'space-evenly'} 
-        height={'25vh'}
+       
         >
-        <HStack ml={'4%'} mr={'4%'}>
+        <div  
+        className='seconddiv'
+        >
             
             
             <Box px={'5%'}>
-             <HStack >
+             <div className='contentdiv' >
                 <Image 
                 height={'50px'}
                 width={'50px'}
                  src="src\assets\last card dog1.png" alt="" />
-                <VStack >
-                    <h2 style={{color:'white'}}>
+                <div >
+                    <h2>
                         <b>120+</b>
                     </h2>
-                    <Text color={'white'}>Satisfied Clients</Text>
+                    <Text className='Text'>Satisfied Clients</Text>
                     
-                </VStack>
-             </HStack>  </Box>  
+                </div>
+             </div >  </Box>  
 
             <Box px={'6%'}>
-            <HStack >
+            <div className='contentdiv' >
                 <Image
                 
                 height={'50px'}
                 width={'50px'}
                  src="src\assets\pngegg.png" alt="" />
-                <VStack>
-                    <h2 style={{color:'white'}}>
+                <div>
+                    <h2>
                         <b>20+</b>
                     </h2>
-                    <Text color={'white'}>Years Experience</Text>
+                    <Text className='Text'>Years Experience</Text>
                     
-                </VStack>
-            </HStack>    
+                </div>
+            </div >    
             </Box>
             <Box px={'6%'}>
-            <HStack style={{display:'flex'}}>
+            <div className='contentdiv' >
                 <Image  
                 height={'50px'}
                 width={'50px'}
                  src="src\assets\petshop.png" alt="" />
-                <VStack>
-                    <h2 style={{color:'white'}}>
+                <div>
+                    <h2>
                         <b>70+</b>
                     </h2>
-                    <Text color={'white'}>Brands Avalaible</Text>
-                </VStack>
-            </HStack>    
+                    <Text className='Text'>Brands Avalaible</Text>
+                </div>
+            </div >    
             </Box>
             <Box px={'5%'}>
-            <HStack>
+            <div className='contentdiv'>
                 <Image 
                 height={'50px'}
                 width={'50px'}
                 src="src\assets\petBag.png" alt="" />
-                <VStack >
-                    <h2 style={{color:'white'}}>
+                <div>
+                    <h2>
                         <b>200+</b>
                     </h2>
-                    <Text color={'white'}>Products for pets</Text>
+                    <Text className='Text'>Products for pets</Text>
                     
-                </VStack>
-            </HStack>   
+                </div>
+            </div>   
             </Box> 
         
         
 
 
 
-            {/* </div> */}
-            </HStack>
+            
+            </div>
         </Card>
     </div>
     

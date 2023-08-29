@@ -1,14 +1,16 @@
 import React from "react";
 
 import "./LastCards.scss";
-import { Box, HStack, Image, Text, VStack, Button } from "@chakra-ui/react";
-import { Badge, Card } from "react-bootstrap";
+import { Box, HStack, Image, Text, VStack, Button,Card } from "@chakra-ui/react";
+import { Badge,   } from "react-bootstrap";
 
 export default function LastCards() {
   return (
-    <Box className="lastcards-box">
-      <HStack>
-        <Card className="last-cards">
+    <Box className="cardsBox">
+      <div className="Parent-Div">
+        <Card className="cardno1"
+        backgroundColor={'#FCDCB5'}
+        >
           <HStack justifyContent={"space-evenly"}>
             <h1 className="heading1">Check Out Our Specials </h1>
 
@@ -21,7 +23,8 @@ export default function LastCards() {
                 tortor vitae purus faucibus ornare vitae purus faucibus ornare
               </Text>
             </VStack>
-            <Image
+            <img
+              className="card1-img"
               height={"300px"}
               width={"400px"}
               src="src\assets\pet-accessories-still-life-concept-with-chew-ball.png"
@@ -33,7 +36,11 @@ export default function LastCards() {
           </Button>
         </Card>
         <Box className="othercards">
-          <Card className="card2">
+          <Card
+          
+          backgroundColor={'#FFDA47'}
+          className="card2">
+            
             <HStack>
               <VStack>
                 <h4 className="headings">
@@ -52,7 +59,9 @@ export default function LastCards() {
               />
             </HStack>
           </Card>
-          <Card className="card3">
+          <Card
+          backgroundColor={'#FFDA47'}
+           className="card3">
             <HStack>
               <VStack>
                 <h4 className="headings">
@@ -73,7 +82,7 @@ export default function LastCards() {
             </HStack>
           </Card>
         </Box>
-      </HStack>
+      </div>
     </Box>
   );
 }

@@ -7,7 +7,7 @@ export default function OtherPostDeign({id,author,date,title,description,imageUr
     
       <Box key={id}>
             
-            <Card>
+            <Card className='otherpost-card'>
             <div>
                 <Badge className='badge-1' bg='warning' style={{color:'black'}} >{badge}</Badge>
               </div>

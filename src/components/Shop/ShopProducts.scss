@@ -21,3 +21,14 @@ $ml-heading3:10%;
 .heading3{
     margin-left: $ml-heading3;
 }
+
+
+
+@media (max-width:700px) {
+    .shop-product-box{
+        height: 300vh;
+    }
+    .parent-container{
+        display: grid !important;
+    }
+}

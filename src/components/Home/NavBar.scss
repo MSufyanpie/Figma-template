@@ -1,0 +1,104 @@
+@mixin socialDiv{
+    display: flex;
+    
+    background-color: #9C5BF5;
+    color: white;
+}
+$f-size:20px;
+$f-size2:15px;
+
+.social-icons{
+font-size: 20px;
+}
+.nav-bar{
+    height: 35vh;
+}
+.social-div{
+    @include socialDiv;
+}
+.four-icons{
+    display: flex;
+    margin-left: 10%;
+}
+.last-icons{
+    display: flex;
+    
+}
+.phone{
+font-size: $f-size;
+}
+.phoneNo{
+    font-size: $f-size2;
+    
+}
+.mail{
+    font-size: $f-size;
+    
+    }
+    .Email{
+        font-size: $f-size2;
+    }
+  .navbar-div{
+    display: flex;
+  } 
+  .navbar-brand{
+    color: #9C5BF5;
+  }
+  .nav-link{
+    color: black;
+  }
+  .cart-icon{
+    color: purple;
+    font-size: 20px;
+}
+.petopia-img{
+    height: 30px;
+    width: 30px;
+}
+
+  @media (max-width:900px) {
+    .nav-bar{
+        height: 25vh;
+    }
+    .menu{
+        display: none;
+    }
+    .cart-icon{
+        font-size: 20px;
+    }
+    .cart-btn{
+        font-size: 20px;
+        width:60px;
+        height: 5%;
+        margin-right: 4%;
+    }
+    .social-icons{
+        font-size: 10px;
+    }
+    .last-icons{
+        font-size: 10px;
+    }
+    .phoneNo{
+        font-size: 8px;
+
+    }
+    .Email{
+        font-size: 8px;
+    }
+    .four-icons{
+        margin-left: 2%;
+    }
+    .phone{
+        font-size: 10px;
+    }
+    .mail{
+        font-size: 10px;
+    }
+    .petopia-img{
+        width: 20px;
+        height: 20px;
+    }
+    .petopia{
+        font-size: 18px;
+    }
+  }

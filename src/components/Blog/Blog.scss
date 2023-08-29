@@ -8,7 +8,14 @@ top:-20px;
 left:200px;
 transform:translateX(-50%) ;
 }
-
+@mixin postBox{
+    align-items:center ;
+    justify-content:center;
+     height:100vh;
+}
+.postsBox{
+    @include postBox;
+}
 
 .badge-1{
     
@@ -17,12 +24,36 @@ transform:translateX(-50%) ;
 .parent-container{
 display: flex;   
 }
+.otherpost-div{
+    display: flex;
+}
+.blog-posts{
+    display: flex;
+}
+.otherposts-box{
+    @include postBox()
+}
 
-// position: $pos;
-    // top: $top; 
-    // left: $left; 
-    // transform: $transform;
-    // background-color:$bg-color;
-    // padding:$pad;
-    // border:$bor;
-    // font-size: $fsize;
+@media (max-width:700px) {
+    .postsBox{
+        height: 150vh;
+    }
+    .blog-posts{
+        display: grid;
+    }
+    .postsCard{
+      width: 90%;
+    }
+
+
+    .otherposts-box{
+        height: 150vh;
+    }
+    .otherpost-div{
+        display: grid;
+    }
+    .otherpost-card{
+        width: 80%;
+        margin-top: 5%;
+    }
+}

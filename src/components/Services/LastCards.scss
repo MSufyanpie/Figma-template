@@ -1,8 +1,7 @@
-@use './ServicesCard.scss' as *;
+
 $height:100vh;
 $padd:3%;
-$color:#FCDCB5;
-$color2:#FFDA47;
+
 $color3:#9C5BF5;
 $ml-headings:5%;
 $mt-card3:2%;
@@ -10,6 +9,7 @@ $mt:20%;
 @mixin card1{
     width:55%;
     margin-left: 5%;
+    
 }
 @mixin text{
     margin-left: 13%;
@@ -32,11 +32,14 @@ $mt:20%;
 @mixin card2{
               height: 250px;
               width: 350px;
-              background-color: $color2;
+              
               border-radius: 10px;
               margin-left: 2%;
 }
-
+.card1-img{
+    height: 300px;
+    width: 400px;
+}
 .image1{
     transform: translateX(25%);
  
@@ -45,14 +48,14 @@ $mt:20%;
     transform: translateX(25%)
 }
 
-.lastcards-box{
+.cardsBox{
    height: $height;
    padding-left: $padd;
    padding-right: $padd;
 }
-.last-cards{
-    background-color:$color;
-    @include border;
+.cardno1{
+    
+    
     @include card1;
 }
 .badge{
@@ -70,7 +73,7 @@ $mt:20%;
 }
 .card2{
     @include card2;
-    @include border
+    
 }
 .headings{
     margin-left: $ml-headings;
@@ -80,9 +83,46 @@ $mt:20%;
 }
 .card3{
     @include card2;
-    @include border;
+    
     margin-top: 2%;
 }
 .heading1{
     margin-top: 20%;
+}
+.Parent-Div{
+    display: flex;
+}
+
+
+@media (max-width:700px) {
+    .cardsBox{
+        height: 130vh;
+    }
+    .Parent-Div{
+        display: grid !important;
+    }
+    .card1-img{
+        height: 150px;
+        width: 150px;
+    }
+    .cardno1{
+        width: 100%;
+
+    }
+    .card2{
+        margin-top: 10%;
+        margin-left: 5%;
+        width: 85%;
+    }
+    .card3{
+        margin-left: 5%;
+        width: 85%;
+    }
+    .badge{
+        height: 30px;
+        font-size: 15px;
+    }
+    .heading1{
+        margin-left: 8%;
+    }
 }

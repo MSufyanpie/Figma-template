@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { cart } from '../../App';
-
+import './NavBar.scss'
 import { AiFillFacebook,AiFillInstagram,AiFillTwitterCircle,AiOutlineWhatsApp,AiFillPhone,AiFillMail,AiOutlineShoppingCart } from 'react-icons/ai';
 import { Box, Button, HStack, Image,useBreakpointValue,Drawer, VStack,Link,IconButton,
   DrawerOverlay,
@@ -12,20 +12,20 @@ import { Box, Button, HStack, Image,useBreakpointValue,Drawer, VStack,Link,IconB
   DrawerHeader,
   DrawerBody
  } from '@chakra-ui/react';
-import './NavBar.css'
+
 export default function NavBar() {
   const displayValue = useBreakpointValue({ base: "none", md: "flex" });
-  // Add state to control the drawer
+  
   const [isOpen, setIsOpen] = useState(false);
-  // Function to toggle the drawer
+  
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
   };
-  // Close the drawer when a navigation link is clicked
+  
   const closeDrawer = () => {
     setIsOpen(false);
   };
-  // Close the drawer when screen size becomes larger
+  
   useEffect(() => {
     if (displayValue === "flex") {
       setIsOpen(false);
@@ -44,65 +44,72 @@ export default function NavBar() {
   };
   
   return (
-    <div className='nav-bar' style={{ position:'relative',height:'35vh'}}>
-        <HStack px={'10%'} style={{backgroundColor:'#9C5BF5',color:'white',  }}>
-                <div style={{fontSize:'30px'}}><AiFillFacebook></AiFillFacebook></div>
-                <div style={{fontSize:'30px'}}><AiFillInstagram></AiFillInstagram></div>
-                <div style={{fontSize:'30px'}}><AiFillTwitterCircle></AiFillTwitterCircle></div>
-                <div style={{fontSize:'30px'}}><AiOutlineWhatsApp></AiOutlineWhatsApp></div>
+    <div className='nav-bar' >
+        <div className='social-div'>
+          <div className='four-icons'>
+                <div className='social-icons' ><AiFillFacebook></AiFillFacebook></div>
+                <div className='social-icons' ><AiFillInstagram></AiFillInstagram></div>
+                <div className='social-icons' ><AiFillTwitterCircle></AiFillTwitterCircle></div>
+                <div className='social-icons' ><AiOutlineWhatsApp></AiOutlineWhatsApp></div>
+                </div>
+                
+                <Box 
+                
+                px={'4%'}>
+                <div className='last-icons' >
+                <AiFillPhone className='phone'  ></AiFillPhone>
+                <p className='phoneNo' > 0000-1234567</p>
+               <p style={{color:'#9C5BF5'}}>.....</p>
+                <AiFillMail className='mail'></AiFillMail> 
+                <p className='Email' >info@example.com</p>
                 
                 
-                <Box px={'6%'}>
-                <HStack style={{textAlign:'center',justifyContent:'space-evenly'}}>
-                <AiFillPhone  style={{fontSize:'30px',}}></AiFillPhone>
-                <p style={{fontSize:'15px'}}> 0000-1234567</p>
-                
-                <AiFillMail style={{fontSize:'30px',}}></AiFillMail> 
-                <p style={{fontSize:'15px'}}>info@example.com</p>
-                
-                
-                </HStack>
+                </div >
                 </Box>
                 
-                </HStack>
-        <Navbar >
-                
-        
-        <Container  >
-       
-        <HStack>
-        <Image style={{height:'30px',width:'30px'}} 
-          src='src\assets\petopia-icon.png'></Image>
-          <IconButton
+                </div>
+                <IconButton
+        className='toggle-btn'
           aria-label="Open menu"
           icon={<HamburgerIcon />}
           variant="ghost"
           display={displayValue === "none" ? "flex" : "none"}
           onClick={toggleDrawer}
         />
-          <Navbar.Brand  style={{color:'#9C5BF5'}} href="#home">
+        <Navbar >
+        
+        
+        <Container  >
+       
+       
+        <div className='navbar-div'>
+       
+        <Image className='petopia-img'  
+          src='src\assets\petopia-icon.png'></Image>
+         
+          <Navbar.Brand className='navbar-brand'    href="#home">
             
             
-         <h3><b>Petopia</b></h3> </Navbar.Brand></HStack>
+         <h3 className='petopia'><b>Petopia</b></h3> </Navbar.Brand></div>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Box className='menu' >
                 <HStack>
               <Box px={"1px"}>
-               <Nav.Link onClick={()=>scrollToSection("#section1")}  style={{color:'black'}} href="/#section1"><b>Home</b></Nav.Link>
+               <Nav.Link className='nav-link' onClick={()=>scrollToSection("#section1")}  href="/#section1"><b>Home</b></Nav.Link>
                </Box>
                <Box px={"1px"}>
-              <Nav.Link onClick={()=>scrollToSection("#section2")} style={{color:'black'}} href="/#section2"><b>Services</b></Nav.Link>
+              <Nav.Link className='nav-link' onClick={()=>scrollToSection("#section2")} href="/#section2"><b>Services</b></Nav.Link>
               </Box>
               <Box px={"1px"}>
-              <Nav.Link onClick={()=>scrollToSection("#section3")} style={{color:'black'}} href="/#section3"><b>Shop</b></Nav.Link>
+              <Nav.Link className='nav-link' onClick={()=>scrollToSection("#section3")}  href="/#section3"><b>Shop</b></Nav.Link>
               </Box>
               <Box px={"1px"}>
-              <Nav.Link  onClick={()=>scrollToSection("#section4")}style={{color:'black'}} href="/#section4"><b>Blog</b></Nav.Link>
+              <Nav.Link className='nav-link'  onClick={()=>scrollToSection("#section4")}  href="/#section4"><b>Blog</b></Nav.Link>
               </Box>
               <Box px={"1px"}>
-              <Nav.Link onClick={()=>scrollToSection("#section5")} style={{color:'black'}} href="/#section5"><b>Contact</b></Nav.Link> 
+              <Nav.Link className='nav-link' onClick={()=>scrollToSection("#section5")}  href="/#section5"><b>Contact</b></Nav.Link> 
               
               </Box>
               </HStack>
@@ -112,7 +119,9 @@ export default function NavBar() {
               >
               
               <Nav.Link   >
-                <Button  style={{backgroundColor:'#FFDA47'}}><AiOutlineShoppingCart style={{color:'purple',fontSize:'20px'}}></AiOutlineShoppingCart>({cart})</Button>
+                <Button className='cart-btn'  style={{backgroundColor:'#FFDA47'}}>
+                  <AiOutlineShoppingCart className='cart-icon'>
+                    </AiOutlineShoppingCart></Button>
                 </Nav.Link>
                 </Box>
               
@@ -127,23 +136,23 @@ export default function NavBar() {
           <DrawerContent>
             <DrawerHeader borderBottomWidth="1px">Menu</DrawerHeader>
             <DrawerBody>
-              <VStack spacing={4}>
+              
                 <Box>
-              <Nav.Link onClick={()=>scrollToSection("#section1")}  style={{color:'black'}} href="/#section1"><b>Home</b></Nav.Link>
+              <Nav.Link onClick={()=>scrollToSection("#section1")}   href="/#section1"><b>Home</b></Nav.Link>
                </Box>
                <Box px={"8px"}>
-              <Nav.Link onClick={()=>scrollToSection("#section2")} style={{color:'black'}} href="/#section2"><b>Services</b></Nav.Link>
+              <Nav.Link onClick={()=>scrollToSection("#section2")}  href="/#section2"><b>Services</b></Nav.Link>
               </Box>
               <Box px={"8px"}>
-              <Nav.Link onClick={()=>scrollToSection("#section3")} style={{color:'black'}} href="/#section3"><b>Shop</b></Nav.Link>
+              <Nav.Link onClick={()=>scrollToSection("#section3")}  href="/#section3"><b>Shop</b></Nav.Link>
               </Box>
               <Box px={"8px"}>
-              <Nav.Link  onClick={()=>scrollToSection("#section4")}style={{color:'black'}} href="/#section4"><b>Blog</b></Nav.Link>
+              <Nav.Link  onClick={()=>scrollToSection("#section4")} href="/#section4"><b>Blog</b></Nav.Link>
               </Box>
               <Box px={"8px"}>
               <Nav.Link onClick={()=>scrollToSection("#section5")} style={{color:'black'}} href="/#section5"><b>Contact</b></Nav.Link> 
               </Box>
-              </VStack>
+              
             </DrawerBody>
           </DrawerContent>
         </DrawerOverlay>

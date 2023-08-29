@@ -1,0 +1,79 @@
+$height:55vh;
+
+@mixin text-styles{
+color:white;
+margin-top:1%;
+}
+
+@mixin card{
+    border: none;
+    background-color: #7C58D3;
+}
+@mixin button{
+    background-color: #FFDA47;
+    width: 133px;
+    height: 50px;
+    color: black;
+    border: 1px solid black;
+}
+@mixin input{
+    width: 319px;
+    height: 50px;
+    border: 3px solid #CDCCCE;
+    background-color:#7C58D3 ;
+}
+.subscribe-btn{
+   @include button;
+}
+input{
+   @include input;
+    
+}
+input::placeholder{
+    color:white;
+    text-align: center;
+}
+.box{
+    height: $height;
+}
+.card{
+    @include card;
+}
+.parent-div{
+    display: flex;
+}
+.third-div{
+    display: flex;
+}
+.head1{
+@include text-styles;
+}
+.txt{
+    @include text-styles; 
+}
+.second-div{
+    margin-right: 2%;
+}
+
+@media (max-width:700px) {
+    .box{
+        height: 175vh;
+
+    }
+    .card{
+        width: 100%;
+        height: 50%;
+    }
+    .parent-div{
+        display: grid !important;
+    }
+    input{
+        width: 200px;
+        margin-left: 3%;
+    }
+    .subscribe-btn{
+        width: 100px;
+        height: 50px;
+    }
+   
+}

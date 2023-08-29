@@ -1,0 +1,65 @@
+
+$m-left:5%;
+@mixin Icons{
+border: 0.5px solid grey;
+color: #7C58D3;
+font-size: 44px;
+border-radius: 5px;
+height:55px;
+ width:45px
+
+}
+@mixin content{
+    margin-left: 1%;
+   
+}
+
+.firstBox{
+height: 40vh;
+}
+
+.parentDiv{
+    display: flex;
+}
+.parentDiv2{
+    display: flex;
+}
+
+.icon-div1{
+    @include Icons;
+}
+.icon-div2{
+    @include Icons;
+    margin-left: $m-left;
+}
+.icon-div3{
+    @include Icons;
+}
+.icon-div4{
+    @include Icons;
+    margin-left: $m-left;
+}
+
+.content-div1{
+    @include content;
+}
+.content-div2{
+    @include content;
+}
+.content-div3{
+    @include content;
+}
+.content-div4{
+    @include content;
+}
+@media (max-width:768px) {
+    .firstBox{
+        height: 150vh;
+    }
+    .parentDiv{
+        display: grid;
+    }
+    .parentDiv2{
+        display: grid;
+    }
+}

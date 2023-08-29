@@ -1,36 +1,38 @@
-import { Box, HStack, VStack } from '@chakra-ui/react'
+import { Box, } from '@chakra-ui/react'
 import React from 'react'
-import { Button, Card } from 'react-bootstrap'
-import './ProductCard.css'
+import {  Card } from 'react-bootstrap'
+import './ProductCard.scss'
 
 export default function ProductCard() {
   return (
     <Box 
-    height={'55vh'}
-     px={'10%'}  justifyContent={'center'} >
+    className='box'
+     px={'10%'}   >
     
         
-        <Card style={{border:'none',backgroundImage:'img.png',backgroundColor:'#7C58D3'}}>
-        <HStack>
-            <br></br>
-            <br></br>
+        <Card
+        className='card'>
+        <div className='parent-div'>
+            
+            
             <img className='img-1' height={'300px'} width={'300px'} src="src\assets\productImages\2ndDog.png" alt="" />
-            <VStack mr={'2%'}>
+            <div className='second-div'>
                 
-                
-            <h2 style={{color:'white'}}><b>Get 20% off Your First Purchase
-            When You Use Petco Credit Card</b></h2>
-            {/* <h2 style={{color:'white'}}><b>When You Use Petco Credit Card</b></h2> */}
-            <p style={{color:'white',marginTop:'1%'}}>Sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum varius.
+              <br/>  
+            <h3 className='head1'><b>Get 20% off Your First Purchase
+            When You Use Petco Credit Card</b></h3>
+           
+            <p className='txt'>Sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum varius.
             Ligula ullamcorper malesuada proin libero nunc consequat interdum  sit.
             </p>
-            <HStack>
+            <br/>
+            <div className='third-div'>
             <input  placeholder='Type your Email'></input>
             <button className='subscribe-btn'><b>Subscribe</b></button>
-            </HStack>
-            </VStack>
+            </div>
+            </div>
             <img  height={'350px'} width={'350px'} src="src\assets\petdogg.png" alt="" />
-            </HStack>
+            </div>
         </Card>
       
     </Box>

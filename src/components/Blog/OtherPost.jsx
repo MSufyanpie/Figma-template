@@ -38,12 +38,14 @@ export default function OtherPost() {
         }
     ]
   return (
-        <Box px={'10%'}  alignItems={'center'} justifyContent={'center'} height={'85vh'}>
+        <Box
+        className='otherposts-box'
+        px={'10%'}  >
             <div style={{textAlign:'center'}}>
             
             <h1>Other Posts</h1><br/>
             </div>
-        <div style={{display:'flex'}}>
+        <div className='otherpost-div' >
     {posts.map((data,index)=>{
         return(
           <OtherPostDeign

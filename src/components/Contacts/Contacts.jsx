@@ -1,9 +1,9 @@
-import { Box, Card, CardBody, HStack } from '@chakra-ui/react'
+import { Box,} from '@chakra-ui/react'
 import React from 'react'
 
 import {AiFillPhone,AiFillMail,AiFillClockCircle} from "react-icons/ai";
 import {BiMap}from "react-icons/bi"
-import './Contact.css'
+import './Contact.scss'
 import ContactsDesign from './ContactsDesign';
 
 export default function Contacts() {
@@ -33,11 +33,13 @@ export default function Contacts() {
         }
     ]
   return (
-    <Box px={'10%'}  style={{backgroundColor:'#FBF9FF',height:'70vh',}}>
-         <div style={{textAlign:'center',marginBottom:'40px'}}>
+    <Box
+    className='contacts-box'
+    px={'10%'}  >
+         <div className='first-div'>
             <p ><b>Our Contacts</b></p>
             <h1>Contact</h1>
-            </div>
+            </div><br/>
             <div className='parent-container'>
             {contact.map((data,index)=>{
                 return(
@@ -51,29 +53,7 @@ export default function Contacts() {
                 )
             })}
            </div>
-    {/* <Box justifyContent={'center'} alignContent={'center'} >
-        
-        <HStack  >
-        {contact.map((data,index)=>{
-        return(
-            <Card  mb={'40px'} boxSize={'250px'} style={{border:'1px solid purple'}} key={index}>
-                <CardBody>
-                <div className='icon1'>
-                   <div style={{color:'purple'}}>{data.line3}</div> 
-                </div>
-                <Box   alignItems={'center'} justifyContent={'center'}>
-             <h3>{data.Title}</h3>
-             <p>{data.line1}</p>
-             <p>{data.line2}</p>
-             
-             </Box>
-             </CardBody>
-             
-            </Card>
-        )
-        })}
-        </HStack>
-    </Box> */}
+  
     </Box>
   )
 }

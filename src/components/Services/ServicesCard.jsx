@@ -1,8 +1,7 @@
 import "./ServicesCard.scss";
 import {
   Box,
-  Button,
-  Card,
+  
 } from "@chakra-ui/react";
 import Mandog from "../../assets/icons8-man-with-dog-48.png";
 import brush from "../../assets/icons8-hair-brush-48.png";
@@ -72,10 +71,7 @@ export default function ServicesCard() {
         <h1 className="txt" >All Pet Care Services</h1>
         <br />
         
-        <Card
-          className="services-cards"
-          
-        >
+       
           <div  className="parent-container">
             
             {row1.map((data,index)=>{
@@ -96,7 +92,7 @@ export default function ServicesCard() {
 
          
 
-        </Card>
+        
       </div>
     </Box>
   );

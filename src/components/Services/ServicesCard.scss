@@ -33,3 +33,17 @@ $padd:7%;
     padding-left: 7%;
     padding-right: 7%;
 }
+@media (max-width:700px) {
+    .parent-container{
+        
+        display: grid !important;
+        
+    }
+    .services-box{
+        height: 300vh;
+    }
+    .serv-cards{
+        width: 250%;
+    }
+    
+}

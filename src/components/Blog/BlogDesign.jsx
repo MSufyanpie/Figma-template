@@ -14,14 +14,14 @@ export default function BlogDesign({id,author,date,title,description,imageUrl,ba
            
             
                 <Card 
-                
+                className='postsCard'
                 >
               
                   <div>
                     <Badge className='badge-1' bg='warning' style={{color:'black'}} >{badge}</Badge>
                   </div>
                   
-                  <Image src={imageUrl}></Image>
+                  <Image className='postimages' src={imageUrl}></Image>
                           
                 </Card>
                 
