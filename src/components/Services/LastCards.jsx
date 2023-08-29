@@ -21,7 +21,7 @@ export default function LastCards() {
         >
           <HStack justifyContent={'space-evenly'} >
             
-            <h1 style={{ marginTop: "20%",  }}>
+            <h1 className="heading1" >
               Check Out Our Specials {" "}
             </h1>
             
@@ -65,13 +65,14 @@ export default function LastCards() {
           >
             <HStack>
               <VStack >
-                <h4 style={{marginLeft:'5%'}}>
+                <h4 className="headings">
                   <b>Luxury Fashion Collection</b>
                 </h4>
 
                 <Button
+                className="shopnow-btn"
                   variant="none"
-                  color={"#9C5BF5"}
+                  
                 >
                   <b>Shop Now</b>
                 </Button>
@@ -87,25 +88,19 @@ export default function LastCards() {
             </HStack>
           </Card>
           <Card
-            style={{
-              height: "250px",
-              width: "350px",
-              backgroundColor: "#FFDA47",
-              border: "none",
-              borderRadius: "10px",
-              marginTop: "2%",
-              marginLeft: "2%",
-            }}
+          className="card3"
+            
           >
             <HStack >
               <VStack >
-                <h4 style={{ marginLeft: "5%",  }}>
+                <h4 className="headings" >
                   <b>Shop What's Trending</b>
                 </h4>
 
                 <Button
+                 className="shopnow-btn"
                   variant="none"
-                  color={"#9C5BF5"}
+                  
                   
                 >
                   <b>Shop Now</b>

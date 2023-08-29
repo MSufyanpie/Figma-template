@@ -5,6 +5,9 @@ $padd:3%;
 $color:#FCDCB5;
 $color2:#FFDA47;
 $color3:#9C5BF5;
+$ml-headings:5%;
+$mt-card3:2%;
+$mt:20%;
 @mixin card1{
     width:55%;
     margin-left: 5%;
@@ -69,4 +72,18 @@ $color3:#9C5BF5;
 .card2{
     @include card2;
     @include border
+}
+.headings{
+    margin-left: $ml-headings;
+}
+.shopnow-btn{
+    color: $color3;
+}
+.card3{
+    @include card2;
+    @include border;
+    margin-top: 2%;
+}
+.heading1{
+    margin-top: 20%;
 }
