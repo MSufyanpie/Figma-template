@@ -1,8 +1,9 @@
-import { Box, Flex, HStack, Image, Link, VStack,SimpleGrid, Card } from '@chakra-ui/react'
+import { Box,} from '@chakra-ui/react'
 import React from 'react'
-import {  Container } from 'react-bootstrap'
+
 import ProductsDesign from './ProductsDesign'
-import './ProductDesign.css'
+
+import './ShopProducts.scss'
 export default function ShopProducts() {
 
   
@@ -39,19 +40,24 @@ export default function ShopProducts() {
     
   return (
     
-    <Box  px={'20%'} height={'120vh'}>
-
-       <HStack>
-        <h4 style={{marginLeft:'3%'}}>
+    <Box 
+    className='shop-product-box'
+    px={'20%'}
+    >
+       <div
+       className='headings'
+       >
+       <h4  >
           Featured Products
         </h4>
-        <h4 style={{marginLeft:'7%'}}>
+        <h4 className='heading2' >
           On Sale Products
         </h4>
-        <h4 style={{marginLeft:'10%'}}>
+        <h4 className='heading3' >
           Top Rated Products
         </h4>
-       </HStack>
+
+       </div><br/>
         <div className='parent-container'>
         {products.map((data,index)=>{
             return (

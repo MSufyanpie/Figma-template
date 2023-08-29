@@ -1,0 +1,23 @@
+$ml-heading2:7%;
+$ml-heading3:10%;
+
+@mixin box{
+    height: 105vh;
+}
+
+.parent-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.shop-product-box{
+    @include box;
+}
+.headings{
+    display: flex;
+}
+.heading2{
+    margin-left: $ml-heading2;
+}
+.heading3{
+    margin-left: $ml-heading3;
+}

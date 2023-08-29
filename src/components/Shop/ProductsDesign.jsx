@@ -1,17 +1,10 @@
 import React from 'react'
 import {  HStack, Image,  VStack, Card } from '@chakra-ui/react'
-import './ProductDesign.css'
+import './ProductDesign.scss'
 export default function ProductsDesign({id,Name,Price}) {
   return (
     <div
-    style={{  justifyContent: "space-evenly",
-                        maxWidth:'33.33%',
-                        padding:'0 3px',
-                        border:'none',
-                        marginBottom:'15px'
-                      
-            
-            }}
+    className='prod-design-div'
     >
         <Card
             mt={'10%'}
