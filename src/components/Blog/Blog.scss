@@ -40,20 +40,23 @@ display: flex;
     }
     .blog-posts{
         display: grid;
+        
     }
     .postsCard{
-      width: 90%;
+      width: 100%;
     }
 
 
     .otherposts-box{
         height: 150vh;
+        
     }
     .otherpost-div{
         display: grid;
+        
     }
     .otherpost-card{
-        width: 80%;
+        width: 100%;
         margin-top: 5%;
     }
 }

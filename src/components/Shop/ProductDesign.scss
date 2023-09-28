@@ -17,6 +17,7 @@ $price-color:#9C5BF5;
 }
 .all-product-cards{
     margin-top: $mt;
+    
 }
 .content-div{
     display: flex;
@@ -29,4 +30,13 @@ $price-color:#9C5BF5;
 }
 .price{
     color: $price-color;
+}
+@media (max-width:700px) {
+    .all-product-cards{
+        margin-bottom: 40%;
+    }
+    .content-div{
+        width: 150%;
+        margin-bottom: 50%;
+    }
 }

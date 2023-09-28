@@ -18,6 +18,8 @@ export default function HomeCard() {
             <div 
             className='parentDiv'
             >
+
+                <div className='cont1'>
                 <div
                 className='icon-div1'
                ><AiFillCar></AiFillCar></div>
@@ -29,6 +31,9 @@ export default function HomeCard() {
                 </h5>
                 <p>Velit euismod pellentes</p>
                 </div>
+                </div>
+
+                <div className='cont2'>
                 <div
                 className='icon-div2'
                 ><BiSolidDiscount></BiSolidDiscount></div>
@@ -42,12 +47,14 @@ export default function HomeCard() {
                 <p>Velit euismod pellentes</p>
                 
                 </div>
+                </div>
             </div>
 
 
             <div
             className='parentDiv2'
            >
+                <div className='cont3'>
                 <div  className='icon-div3' ><AiOutlineUser></AiOutlineUser></div>
                 <div 
                  className='content-div3'
@@ -57,6 +64,8 @@ export default function HomeCard() {
                 </h5>
                 <p>Velit euismod pellentes</p>
                 </div>
+                </div>
+                <div className='cont4'>
                 <div
                  className='icon-div4'
                ><BiCheckboxChecked></BiCheckboxChecked></div>
@@ -67,6 +76,7 @@ export default function HomeCard() {
                     Guarantee
                 </h5>
                 <p>Velit euismod pellentes</p>
+                </div>
                 </div>
             </div>
         </Card>

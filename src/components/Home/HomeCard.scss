@@ -15,7 +15,7 @@ height:55px;
 }
 
 .firstBox{
-height: 40vh;
+height: 55vh;
 }
 
 .parentDiv{
@@ -54,12 +54,31 @@ height: 40vh;
 }
 @media (max-width:768px) {
     .firstBox{
-        height: 150vh;
+        height: 60vh;
     }
     .parentDiv{
         display: grid;
     }
     .parentDiv2{
         display: grid;
+    }
+    .cont1{
+        display: flex;
+        margin-left: 5%;
+        margin-bottom: 8%;
+    }
+    .cont2{
+        display: flex;
+        margin-bottom: 5%;
+        margin-bottom: 8%;
+    }
+    .cont3{
+        display: flex;
+        margin-left: 5%;
+        margin-bottom: 8%;
+    }
+    .cont4{
+        display: flex;
+        margin-bottom: 8%;
     }
 }

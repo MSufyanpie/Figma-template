@@ -10,7 +10,7 @@ import Footer from "../Footer/Footer";
 
 export default function Sections() {
   return (
-    <div>
+    <div style={{overflowX:'none'}}>
       <section id="section1">
         <Home />
       </section>

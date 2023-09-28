@@ -86,10 +86,10 @@ export default function NavBar() {
        
         <Image className='petopia-img'  
           src='src\assets\petopia-icon.png'></Image>
-         
+       <div className='logo-btn'>
           <Navbar.Brand className='navbar-brand'    href="#home">
             
-            
+         
          <h3 className='petopia'><b>Petopia</b></h3> </Navbar.Brand></div>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -124,10 +124,11 @@ export default function NavBar() {
                     </AiOutlineShoppingCart></Button>
                 </Nav.Link>
                 </Box>
+                
               
             </Nav>
           </Navbar.Collapse>
-          
+          </div>
         </Container>
         
       </Navbar><br/>
